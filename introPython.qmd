@@ -1,0 +1,8 @@
+# Introducción a Python
+
+Hagamos nuestro saludo de entrada a Python:
+
+```{python}
+# Nuestra primera impresión
+print("¡Hola, Mundo!")
+```

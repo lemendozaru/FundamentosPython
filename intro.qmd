@@ -1,5 +1,7 @@
-# Introduction
+# Introducción
 
-This is a book created from markdown and executable code.
+En ArchLinux no es necesario instalar Python, pues este ya viene con la distribución. Sin embargo, para poder crear documentos con Quarto o utilizar Jupyter es necesario instalar este pero no de la manera recomendada para otros sistemas operativos. Debemos hacerlo mediante el gestor Pacman.
 
-See @knuth84 for additional discussion of literate programming.
+```bash
+sudo pacman -S jupyterlab
+```
