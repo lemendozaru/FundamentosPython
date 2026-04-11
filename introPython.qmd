@@ -6,3 +6,41 @@ Hagamos nuestro saludo de entrada a Python:
 # Nuestra primera impresión
 print("¡Hola, Mundo!")
 ```
+
+## Variables
+
+### Creando
+
+Se utilizan para almacenar valores que se van a utilizar varias veces. Estos valores pueden ser de varios tipos. Supongamos que deseamos escribir un escalador de recetas, por lo que necesitaremos algunas variables. Primero, requerimos el nombre del platillo y cantidades numéricas.
+
+Declaremos esas variables y para comprobar que están bien, las imprimimos:
+
+```{python}
+# Nombre del platillo
+pasta = "Espagueti"
+
+# Cantidad
+cantidad = 80
+
+# Imprimimos
+print(pasta)
+print(cantidad)
+```
+
+### Actualizando
+
+Si en algún momento deseamos cambiar el valor de una variable ya asignado, podemos actualizarlo volviendo a "declarar" dicha variable:
+
+```{python}
+# Vemos lo que tiene la variable
+print(pasta)
+```
+
+```{python}
+# Cambiamos de pasta
+pasta = "Codito"
+
+# Verificamos el cambio
+print(pasta)
+```
+
