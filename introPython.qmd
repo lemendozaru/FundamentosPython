@@ -44,3 +44,72 @@ pasta = "Codito"
 print(pasta)
 ```
 
+## Tipos de datos
+
+### Datos tipo cadena o caracteres
+
+Pueden contener letras, números y puntuación. Siempre se escriben entrecomilladas y las comillas pueden ser dobles o sencillas. Sin embargo, debido a que en inglés existe la necesidad de escribir apóstrofes, se sugiere privilegiar las dobles. Por ejemplo, las siguientes variables son cadenas:
+
+```{python}
+# Variable de texto
+saludo = "Hola, mundo"
+
+# Otra variable de texto
+nombre_ingrediente = "Aguacate"
+```
+
+### Los numéricos
+
+Nuestro proyecto es bastante sencillo, estamos creando un escalador de recetas, el cual nos permitirá cambiar las cantidades de los ingredientes de acuerdo al número de personas. Trabajemos con las variables numéricas, incluyendo tanto enteros como decimales (flotantes), ya que las cantidades pueden representarse de ambas maneras.
+
+Por ejemplo, declaremos una variable que almacene el número de dientes de ajo:
+
+```{python}
+# Variable entera
+dientes_ajo = 3
+```
+
+Con las variables numéricas no se utilizan las comillas. Ahora declaremos otra que guarde el número de cucharadas de aceite de oliva:
+
+```{python}
+# Variable flotante
+cuch_aceite_oliva = 2.5
+```
+
+Comprobemos que todo esté bien. Vamos a imprimir ambas variables.
+
+```{python}
+print(dientes_ajo)
+print(cuch_aceite_oliva)
+```
+
+### Variables lógicas
+
+Otro tipo de dato muy importante son las lógicas o booleanas. Estas almacenan información del tipo "cierto/falso", por lo que serán perfectas para verificar si ya contamos con ciertos ingredientes o no. Creemos una variable para indicar que ya tenemos pasta en casa:
+
+```{python}
+# Variable lógica
+hay_pasta = True
+```
+
+Ahora otra para decir que no tenemos dientes de ajo:
+
+```{python}
+hay_ajo = False
+```
+
+Veamos cómo se imprimen:
+
+```{python}
+print(hay_pasta)
+print(hay_ajo)
+```
+
+## Función `type()`
+
+Si en un momento dado no sabemos el tipo de una variable, podemos conocerlo con `type()`. Imprimamos el tipo de `cuch_aceite_oliva` y `hay_ajo`:
+
+```{python}
+print(type(cuch_aceite_oliva))
+print(type(hay_ajo))
+```

@@ -1,0 +1,3 @@
+# Manipulando tipos de datos
+
+## Trabajando con cadenas

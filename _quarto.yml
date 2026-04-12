@@ -8,6 +8,7 @@ book:
     - index.qmd
     - intro.qmd
     - introPython.qmd
+    - manipulandoTiposDatos.qmd
     - references.qmd
 
 bibliography: references.bib
