@@ -1,3 +1,65 @@
 # Manipulando tipos de datos
 
-## Trabajando con cadenas
+## Cadenas
+
+Ya se había mencionado que se prefiere utilizar dobles comillas para el trabajo con texto, esto para evitar problemas con el apóstrofe que también es la comillla simple.
+
+Pero también podemos utilizar las triples comillas, lo que nos permite escribir cadenas de texto de varias líneas. Probemos con una receta para nuestro proyecto:
+
+```{python}
+instrucciones_receta = """1. Toma un recipiente grande de agua con sal hirviendo y cocina la pasta
+2. Calienta el aceite de oliva en un sartén y sofríe el ajo hasta que aromatice
+3. Agrega jitomates picados y cocínalos por 10 minutos
+4. Mezcla la pasta cocinada con la salsa de tomate y sírvase
+"""
+```
+
+Ahora veamos cómo queda:
+
+```{python}
+print(instrucciones_receta)
+```
+
+### Métodos
+
+En Python usamos métodos, los cuales son funciones disponibles solo para ciertos tipos de datos. Algunos métodos útiles para texto se abordan a continuación.
+
+Un método para reemplazar texto es `.replace()`.
+
+```{python}
+# Una pasta genérica...
+tipo_pasta = "pasta"
+# que mostramos
+print(tipo_pasta)
+```
+
+Pongamos un nombre más claro:
+
+```{python}
+# Cambiamos el nombre
+tipo_pasta = tipo_pasta.replace("pasta", "pasta fusilli")
+# Volvemos a imprimir
+print(tipo_pasta)
+```
+
+Podemos cambiar el texto a minúsculas o mayúsculas:
+
+```{python}
+# Declaramos el primer ingrediente
+ingrediente_01 = "Jitomate"
+# Lo cambiamos a minúsculas
+ingrediente_01 = ingrediente_01.lower()
+print(ingrediente_01)
+```
+
+```{python}
+# Declaramos un nombre de receta
+receta_01 = "fideo"
+# Cambiamos a mayúsculas
+receta_01 = receta_01.upper()
+print(receta_01)
+```
+
+## Listas
+
+
