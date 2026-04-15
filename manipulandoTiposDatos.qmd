@@ -62,4 +62,77 @@ print(receta_01)
 
 ## Listas
 
+Las listas nos permiten almacenar varios valores en una sola variable y pueden contener cualquier combinación de tipos de datos.
+
+Crearemos unas cuantas listas para almacenar los ingredientes y las cantidades en gramos.
+
+```{python}
+# Creamos la lista de ingredientes
+ingredientes = ["fusilli", "jitomates", "ajo", "albahacaa", "aceite de oliva", "sal"]
+# Mostramos la lista
+print(ingredientes)
+```
+
+```{python}
+# Ahora creamos la lista con las cantidades
+cantidades = [500, 400, 15, 20, 30, 10]
+# y la mostramos
+print(cantidades)
+```
+
+Python ordena los elementos de una lista contando desde `0`, por lo que el primer elemento siempre será el elemento `0`.
+
+### Accediendo a los elementos de una lista
+
+Se utiliza el nombre de la lista y entre corchetes colocamos el índice del elemento a buscar. Por ejemplo, para acceder al primer elemento de los ingredientes hacemos:
+
+```{python}
+# Seleccionar el primer elemento
+print(ingredientes[0])
+```
+
+En caso de desear acceder al último dato en una lista, podemos escribir el índice del mismo o bien, escribir `-1`:
+
+```{python}
+# Seleccionamos el último elemento
+print(ingredientes[5])
+# Igual, pero con -1
+print(ingredientes[-1])
+```
+
+Si deseamos acceder a varios elementos en Python, debemos tener en cuenta que no incluye el índice "por derecha". Para ilustrarlo, tratemos de acceder al segundo y tercer elemento en lista:
+
+```{python}
+# Accedemos al tercero agregando 1 al índice
+print(ingredientes[1:3])
+```
+
+¿Pero qué pasa con el índice "por izquierda"?
+
+```{python}
+# Seleccionemos desde el cuarto elemento
+print(ingredientes[3:])
+```
+
+```{python}
+# Obtengamos los primeros 3 elementos
+print(ingredientes[:3])
+```
+
+También podemos acceder alternando a los objetos dentro de la lista:
+
+```{python}
+# Accedamos cada dos elementos
+print(ingredientes[::2])
+# Lo mismo pero indicando a partir de cuál
+print(ingredientes[1::2])
+# Contando cada tercer elemento
+print(ingredientes[1::3])
+```
+
+## Diccionarios
+
+
+
+
 
