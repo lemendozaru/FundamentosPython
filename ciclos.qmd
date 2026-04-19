@@ -71,3 +71,56 @@ Solo podemos usar un `else` en el flujo y siempre debe ir al final, después de 
 
 ## Ciclos `for`
 
+### Sintaxis
+
+La sintaxis consiste en lo siguiente: para cada `valor` dentro de la `secuencia`, ejecuta tal `acción`.
+
+```python
+for valor in secuencia:
+    acción
+```
+
+La secuencia es algo iterable, como una lista o un diccionario; mientras el valor es un índice, al cual le podemos nombrar como queramos aunque un comodín muy común es `i`.
+
+Partamos de una lista y vayamos recorriéndola para imprimir todos sus elementos por separado.
+
+```{python}
+# Creamos la lista
+ingredientes = ["fusilli", "tomates", "ajo", "albahaca", "aceite de oliva", "sal"]
+# Recorremos a través de cada elemento en la lista
+for ingrediente in ingredientes:
+    print(ingrediente)
+```
+
+Si deseamos iterar en un rango controlado, podemos introducir precisamente dicho rango:
+
+```{python}
+# Contaremos del 1 al 6
+for ingrediente in range(1, 7):
+    print("Agregando ingrediente", ingrediente)
+```
+
+### Ciclo condicional
+
+Podemos agregarle condicionales a nuestro ciclo, partiendo de una lista de cantidades, naturalmente.
+
+```{python}
+# Creamos la lista
+cantidades = [500, 400, 20, 15, 15, 7]
+
+# Recorremos las cantidades en ciclo
+for cantidad in cantidades:
+    if cantidad >= 400:
+        print("Alta cantidad")
+    elif cantidad >= 200:
+        print("Cantidad media")
+    else:
+        print("Baja cantidad")
+```
+
+### Ciclo en un diccionario
+
+
+
+
+
