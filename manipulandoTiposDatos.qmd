@@ -132,7 +132,116 @@ print(ingredientes[1::3])
 
 ## Diccionarios
 
+Son listas que contienen el listado de elementos pero además incluyen un valor asignado a cada uno de ellos. De ahí el nombre de diccionarios: un elemento y su definición. En el proyecto de escalador de recetas necesitamos un diccionario que enlace los ingredientes con sus cantidades.
 
+### Creando diccionarios
+
+Se utilizan las llaves`{}` para el contenido, colocando primero el nombre (la clave) y luego su correspondiente valor.
+
+```{python}
+# Creando el diccionario para una receta
+receta = {"pasta": 500,
+          "tomates": 400,
+          "ajo": 15,
+          "albahaca": 20,
+          "aceite de oliva": 30,
+          "sal": 5}
+```
+
+### Accediendo a los datos
+
+Los diccionarios están ordenados y permiten acceder a sus valores por referenciar la clave. Por ejemplo, accedamos a la cantidad de pasta:
+
+```{python}
+# ¿Cuánta pasta necesitamos?
+print(receta["pasta"])
+```
+
+Si queremos acceder a todos los valores, basta con
+
+```{python}
+# Obtener todos los valores
+print(receta.values())
+```
+
+Y para las claves:
+
+```{python}
+# Leer todas las claves
+print(receta.keys())
+```
+
+Si lo que queremos es mostrar todo el diccionario, tenemos dos formas, verlo completo o mostrar cada par de elementos organizado.
+
+```{python}
+# Mostrar todo el diccionario
+print(receta)
+```
+
+```{python}
+# Obtener todos los objetos
+print(receta.items())
+```
+
+### Editando objetos
+
+Para agregar un nuevo objeto basta con hacer referencia al nuevo elemento y asignarle su valor:
+
+```{python}
+# Agregar el parmesano
+receta["parmesano"] = 50
+```
+
+Si queremos actualizar un objeto, seguimos el mismo proceso, pero obviamente con una clave ya existente en el diccionario:
+
+```{python}
+# Cambiar la cantidad de pasta
+receta["pasta"] = 800
+```
+
+## Conjuntos y tuplas
+
+### Los conjuntos
+
+Contienen datos únicos cuyos valores pueden ser agregados y eliminados, pero no editados. Son ideales para identificar y remover duplicados, ya que además son rápidos para realizar búsquedas en ellos. Sin embargo, no es posible indexarlos, solo ordenarlos.
+
+Un conjunto se crea utilizando también `{}`, pero sin utikizar los dos puntos `:`, ya que no son diccionarios.
+
+```{python}
+# Creando un conjunto
+conjunto_ingredientes = {"pasta", "tomates", "albahaca", "ajo"}
+# Mostrando el conjunto
+print(conjunto_ingredientes)
+```
+
+Un conjunto puede ordenarse con
+
+```{python}
+# Mostrar un conjunto ordenado
+print(sorted(conjunto_ingredientes))
+```
+
+Una lista puede convertirse en un conjunto con la función `set()`.
+
+### Las tuplas
+
+Son inmutables: no permiten agregar, remover ni editar valores aunque sí ordenarse e indexarse. Son útiles para almacenar información o identificadores.
+
+Una tupla puede crearse con `()`:
+
+```{python}
+# Creando una tupla
+porciones = (1, 2, 4, 6)
+```
+
+Una estructura de datos puede convertirse en una tupla con la sentencia `tuple()`.
+
+La indexación de una tupla es igual a otras estructuras:
+
+```{python}
+# Accediendo al segundo elemento
+print(porciones[1])
+```
 
 
 
