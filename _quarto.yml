@@ -9,6 +9,7 @@ book:
     - intro.qmd
     - introPython.qmd
     - manipulandoTiposDatos.qmd
+    - ciclos.qmd
     - references.qmd
 
 bibliography: references.bib

@@ -1,0 +1,73 @@
+# Flujos de trabajo y ciclos
+
+## Operadores lógicos
+
+Se utilizan para realizar comparaciones o verificar la igualdad entre objetos. En python tenemos varios disponibles:
+
+- `==` para la igualdad
+- `!=` para la desigualdad
+- `<` "menor que"
+- `>` "mayor que"
+- `<=` "menor o igual que"
+- `>=` "mayor o igual que"
+
+Estas comparaciones casi siempre se entiende que son para valores numéricos. Sin embargo, pueden aplicarse a textos, aunque solo consideran el orden alfabético en esos casos.
+
+## Sentencias condicionales
+
+### El `if`
+
+Se utiliza para comprobar si una condición es cumplida, entonces se realiza una función o se evita, en consecuencia. Se define por la palabra reservada `if`, seguida por la condición a verificar y debe acompañarse de `:`, delante del cual se especifica la acción a realizar. Siempre va primero en las comparaciones lógicas.
+
+```{python}
+# Verificando existencias de pasta
+pasta_necesaria = 200
+pasta_disponible = 500
+
+# Comparando cantidades
+if pasta_necesaria <= pasta_disponible:
+    print("Suficiente pasta.")
+```
+
+### El `elif`
+
+Si la condición no se cumple, tenemos dos caminos a elegir: poner otra condición y verificar si esta se cumple o directamente especificar otra acción a realizar.
+
+La sentencia `elif` nos permite lo primero. Por ejemplo, suponiendo que no tenemos suficiente pasta, podemos verificar si al menos tenemos una cantidad que nos permita raciones más pequeñas o menor cantidad de invitados:
+
+```{python}
+# Verificando existencias de pasta
+pasta_necesaria = 500
+pasta_disponible = 300
+
+# Comparando cantidades
+if pasta_necesaria <= pasta_disponible:
+    print("Suficiente pasta.")
+elif pasta_disponible >= 300:
+    print("Prueba porciones menores.")
+```
+
+Podemos utilizar tantas sentencias `elif` como queramos, aunque siempre debe ir después de un `if`.
+
+### El `else`
+
+Si no se cumple ninguna condición, podemos especificar qué hacer. Ello se hace con el `else`. Supongamos una situación en la que ni siquiera tenemos la pasta suficiente para raciones pequeñas:
+
+```{python}
+# Verificando existencias de pasta
+pasta_necesaria = 500
+pasta_disponible = 200
+
+# Comparando cantidades
+if pasta_necesaria <= pasta_disponible:
+    print("Suficiente pasta.")
+elif pasta_disponible >= 300:
+    print("Prueba porciones menores.")
+else:
+    print("No hay pasta suficiente.")
+```
+
+Solo podemos usar un `else` en el flujo y siempre debe ir al final, después de un `if` o `elif`.
+
+## Ciclos `for`
+
