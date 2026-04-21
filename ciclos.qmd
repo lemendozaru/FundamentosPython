@@ -120,6 +120,49 @@ for cantidad in cantidades:
 
 ### Ciclo en un diccionario
 
+Utiliza la misma dinámica que en las anteriores estructuras, con excepción de que puede usar dos iteradores. Veamos cómo escalar las cantidades tras multiplicarlas por dos de manera iterada.
+
+```{python}
+# Creamos la receta
+receta = {
+          "fusilli": 500,
+          "tomates": 400,
+          "albahaca": 20,
+          "ajo": 15,
+          "aceite de oliva": 15,
+          "sal": 7}
+
+# Iteramos a través de sus elementos
+# Para cada ingrediente y cantidad en la receta:
+for ingrediente, cantidad in receta.items():
+    # duplica la cantidad para escalarla
+    cantidad_escalada = cantidad * 2
+
+    # Imprime
+    print(ingrediente, ":", cantidad_escalada, "g")
+```
+
+## Ciclo `while`
+
+Contrario al bucle `for` que se ejecuta de acuerdo a unos límites que nosotros especificamos, el `while` estará funcionando mientras se cumplan las condiciones dadas en su codificación. Eso abre la posibilidad de ciclos infinitos o que terminan colapsando el equipo. Debemos ser muy cuidadosos con nuestros ciclos `while`.
+
+Vamos a crear un ciclo `while` que se esté ejecutando mientras una variable sea menor a otra, pero es muy importante que hagamos que la primera comience a incrementarse para que así tenga que finalizar en algún momento nuestro ciclo.
+
+```{python}
+# Invitaciones confirmadas
+confirmaciones = 10
+# Número de asistentes
+asistentes = 0
+
+# Ciclo que cuenta los asistentes
+while asistentes < confirmaciones:
+    asistentes += 1
+    print(asistentes, "invitados")
+
+# Ciclo finalizado
+print("Tenemos", asistentes, "asistentes llegando.")
+```
+
 
 
 
