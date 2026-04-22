@@ -163,6 +163,75 @@ while asistentes < confirmaciones:
 print("Tenemos", asistentes, "asistentes llegando.")
 ```
 
+### Bucles condicionales
+
+Debemos verificar que tengamos suficiente cantidad de ingredientes antes de escalar nuestra receta. Usaremos un bucle `while` combinado con lógica condicional para comprobar las cantidades y proporcionar actualizaciones que resulten útiles.
+
+También utilizaremos una variable que hará el seguimiento de cuantos ingredientes hemos verificado y otra que representa el número total de ingredientes de la receta.
+
+```{python}
+# Número de ingredientes
+total_ingred = 7
+# # Número de verificados
+ingred_verificados = 0
+
+# Creamos el bucle
+# Mientras los verificados sean menos que el total
+while ingred_verificados < total_ingred:
+    # incrementamos el conteo
+    ingred_verificados += 1
+    # Si hay menos de 4 verificados
+    if ingred_verificados < 4:
+        # imprime lo que falta
+        print("Falta más de la mitad")
+    # Pero si hay 6 o menos:
+    elif ingred_verificados <= 6:
+        print("Casi terminamos")
+    # Si no:
+    else:
+        print("Hemos terminado")
+```
+
+## El flujo de trabajo
+
+Probemos la función de lista de la compra para el escalador de recetas. Antes de escalar, debemos comprobar si nos falta algún ingrediente.
+
+Retomemos los diccionarios necesarios:
+
+```{python}
+# Cantidades necesarias
+receta = {"pasta": 500,
+          "tomates": 400,
+          "albahaca": 20,
+          "ajo": 15,
+          "aceite de oliva": 30,
+          "sal": 10}
+
+# Cantidades disponibles
+inventario = {"pasta": 100,
+              "tomates": 1500,
+              "albahaca": 20,
+              "ajo": 10,
+              "aceite de oliva": 10,
+              "sal": 150}
+```
+
+```{python}
+# Creamos una lista para las compras
+lista_compras = []
+
+# Recorremos el diccionario Receta para acceder a todo
+for ingrediente, cantidad in receta.items():
+    # Verificamos si necesitamos:
+    if cantidad > inventario[ingrediente]:
+        # agrega el ingrediente a la lista de compras
+        lista_compras.append(ingrediente)
+
+# Imprime la lista de compras
+print(lista_compras)
+
+```
+
 
 
 
