@@ -229,9 +229,65 @@ for ingrediente, cantidad in receta.items():
 
 # Imprime la lista de compras
 print(lista_compras)
-
 ```
 
+Ahora contemos rápidamente cuántos artículos tenemos en la lista de compras.
+
+```{python}
+# Contamos cuántos objetos compraremos
+ing_a_comprar = 0
+
+# Por cada objeto en la lista:
+for objeto in lista_compras:
+    # Incrementa el número de objetos
+    ing_a_comprar += 1
+
+# Imprimimos ambos arreglos
+print(lista_compras)
+print(ing_a_comprar)
+```
+
+### El escalador de recetas
+
+Debe comprobar si tenemos suficientes ingredientes, escalar la receta para más raciones y crear una lista de compra con los ingredientes que falten. Supongamos que tendremos un evento para 10 personas.
+
+Creemos todo lo necesario:
+
+```{python}
+# Receta para 4 personas
+receta_pasta = {"pasta": 500,
+                "tomates": 400,
+                "ajo": 15,
+                "albahaca": 20,
+                "aceite de oliva": 30,
+                "sal": 10}
+
+# Cantidades disponibles
+despensa = {"pasta": 500,
+            "tomates": 800,
+            "aceite de oliva": 100,
+            "ajo": 15}
+
+# Creamos lista de compras
+lista_compras = []
+
+# Creamos el factor de escalado
+factor_escala = 10 / 4
+
+# Bucle para obtener cantidad y receta
+# Por cada ingrediente y cantidad en el diccionario:
+for ingrediente, cantidad in receta_pasta.items():
+    # calculamos su cantidad necesaria
+    cantidad_necesaria = cantidad*factor_escala
+
+    # Verificamos si necesitamos comprar el ingrediente:
+    if ingrediente not in despensa or cantidad_necesaria > despensa[ingrediente]:
+        lista_compras.append(ingrediente)
+
+print(lista_compras)
+```
+
+Listo. Nuestro escalador realiza un recorrido por la despensa, calcula cantidades necesarias y nos elabora una lista básica de compras.
 
 
 
