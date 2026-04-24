@@ -1,0 +1,51 @@
+# El ecosistema Python
+
+## Funciones predefinidas
+
+Existen varias funciones predefinidas en Python, las cuales nos permiten construir programas con menos código. Veamos algunas que resultan ser muy útiles.
+
+Para encontrar las cantidades mayores o menores:
+
+```{python}
+# Lista de tiempos
+tiempos_preparación = [19.23, 15.67, 48.57, 23.45, 12.06, 34.56, 45.67]
+
+# Encontremos el mmayor tiempo
+print(max(tiempos_preparación))
+```
+
+```{python}
+# Encontremos el menor
+print(min(tiempos_preparación))
+```
+
+```{python}
+# Calculemos el total de tiempos
+print(sum(tiempos_preparación))
+```
+
+```{python}
+# Contemos cuántos tiempos tenemos
+print(len(tiempos_preparación))
+```
+
+```{python}
+# Redondeemos la sumatoria a dos decimales
+print(round(sum(tiempos_preparación),2))
+```
+
+```{python}
+# Calculemos el promedio de tiempos
+print(sum(tiempos_preparación) / len(tiempos_preparación))
+```
+
+```{python}
+# Ordenemos los tiempos
+print(sorted(tiempos_preparación))
+```
+
+Aunque también se pueden ordenar caracteres, de manera alfabética, claro.
+
+```{python}
+print(sorted("Juan"))
+```

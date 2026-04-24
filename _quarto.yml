@@ -10,6 +10,7 @@ book:
     - introPython.qmd
     - manipulandoTiposDatos.qmd
     - ciclos.qmd
+    - ecosistemaPython.qmd
     - references.qmd
 
 bibliography: references.bib
