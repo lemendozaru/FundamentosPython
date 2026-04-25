@@ -49,3 +49,54 @@ Aunque también se pueden ordenar caracteres, de manera alfabética, claro.
 ```{python}
 print(sorted("Juan"))
 ```
+
+## Módulos
+
+Los módulos son programas Python almacenados en archivos `.py`, los cuales contienen funciones y atributos e incluso otros módulos. Esto nos permite evitar código que ya existe.
+
+Hay cerca de 200 módulos predefinidos. Uno muy conocido es `os`, el cual se usa para interactuar con el sistema operativo, verificar la carpeta actual, enlistar archivos disponibles y acceder a variables de entorno.
+
+### Importar un módulo
+
+```{python}
+# Importemos os
+import os
+
+# Revisemos su tipo
+print(type(os))
+```
+
+### Encontrando información
+
+Podemos revisar la documentación para acceder a información sobre los módulos.
+
+```python
+# Esto arrojará mucho texto
+print(help(os))
+```
+
+### El directorio de trabajo
+
+```python
+# Obteniéndolo
+print(os.getcwd())
+# O asignándolo a una variable
+carpeta_trabajo = os.getcwd()
+```
+
+```python
+# Cambiando el directorio
+os.chdir("home/Descargas")
+# Verificar
+print(os.getcwd())
+```
+
+### Atributos de un módulo
+
+Los atributos devuelven valores mientras las funciones ejecutan tareas. Los atributos no llevan paréntesis. Obtengamos la variable de entorno:
+
+```python
+# Obtener el entorno local
+print(os.environ)
+```
+
